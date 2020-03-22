@@ -14,7 +14,6 @@ def WhatsappBot(request):
     answer = wikiWaka.getInfo(msg)
 
     resp = MessagingResponse()
-    resp.message(answer)
 
     start = -1600
     stop = 0

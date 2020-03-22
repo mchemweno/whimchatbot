@@ -7,7 +7,7 @@ def getInfo(message):
         # soup = BeautifulSoup(answer.content, 'html.parser')
         # text = soup.get_text()
 
-        answer = wikipedia.summary(message, auto_suggest=True)
+        answer = wikipedia.summary(message,sentences=10, auto_suggest=True)
     except:
         return "please rephrase your question well"
 

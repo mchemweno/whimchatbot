@@ -11,4 +11,4 @@ def GetInfo(message):
     except:
         np = "please rephrase your question well"
 
-    return np
+    return str(np)

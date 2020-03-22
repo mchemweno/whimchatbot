@@ -9,5 +9,4 @@ def getInfo(message):
 
     return answer.content
 
-getInfo("types of computers")
 

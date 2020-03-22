@@ -8,14 +8,12 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 @api_view(['POST'])
 def WhatsappBot(request):
-    # print(request.data)
+    print(request.data)
     msg = request.data['Body']
 
     answer = wikiWaka.GetInfo(msg)
-    print(str(answer))
 
     resp = MessagingResponse()
-    resp.message(str(answer))
+    resp.message(answer)
 
-    # print(resp)
     return HttpResponse(resp)

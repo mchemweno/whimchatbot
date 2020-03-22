@@ -17,3 +17,9 @@ def WhatsappBot(request):
     resp.message(answer)
 
     return HttpResponse(resp)
+
+@api_view(['POST'])
+def DeliveryStatus(request):
+    print(request.data)
+
+

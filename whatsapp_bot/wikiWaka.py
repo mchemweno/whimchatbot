@@ -1,16 +1,17 @@
 from bs4 import BeautifulSoup
 import wikipedia
 
+
 def getInfo(message):
     try:
         # answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=True)
         # soup = BeautifulSoup(answer.content, 'html.parser')
         # text = soup.get_text()
 
-        answer = wikipedia.summary(message,sentences=10, auto_suggest=True)
+        answer = wikipedia.summary(message, sentences=10, auto_suggest=True)
+        print(answer)
     except:
         return "please rephrase your question well"
 
-    return answer
-
+    return str(answer)
 

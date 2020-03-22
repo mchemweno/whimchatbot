@@ -3,9 +3,9 @@ import wikipedia
 
 def GetInfo(message):
     try:
-        answer = wikipedia.summary(message, sentences=10, auto_suggest=True)
+        answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=False)
 
-        print(answer)
+        print(answer.content)
     except:
         answer = "please rephrase your question well"
 

@@ -14,4 +14,3 @@ def getInfo(message):
     return answer
 
 
-getInfo("champions league")

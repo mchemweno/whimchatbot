@@ -12,10 +12,10 @@ def WhatsappBot(request):
     msg = request.data['Body']
 
     answer = wikiWaka.GetInfo(msg)
-    print(answer)
+    print(str(answer))
 
     resp = MessagingResponse()
-    resp.message(answer)
+    resp.message(answer.)
 
     # print(resp)
     return HttpResponse(resp)

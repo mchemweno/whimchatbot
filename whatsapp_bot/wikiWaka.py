@@ -3,8 +3,7 @@ import wikipedia
 
 def GetInfo(message):
     try:
-        answer = wikipedia.summary(message, sentences=50, auto_suggest=True)
-        # answer = wikipedia.page(title=None, pageid=100, auto_suggest=True, redirect=True, preload=False)
+        answer = wikipedia.summary(message, sentences=30, auto_suggest=True)
 
         print(answer)
     except:
@@ -12,4 +11,3 @@ def GetInfo(message):
 
     return str(answer)
 
-GetInfo("champions league")

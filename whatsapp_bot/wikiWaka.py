@@ -1,12 +1,13 @@
 import wikipedia
 
-def GetInfo(message):
+def getInfo(message):
     try:
-        answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=False)
-        print(type(answer))
-        print(type(answer.content))
+        answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=True)
+        print(answer.content)
     except:
         return "please rephrase your question well"
 
     return answer.content
+
+getInfo("types of computers")
 

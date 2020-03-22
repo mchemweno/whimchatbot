@@ -11,7 +11,7 @@ def WhatsappBot(request):
     print(request.data)
     msg = request.data['Body']
 
-    answer = wikiWaka.GetInfo(msg)
+    answer = wikiWaka.getInfo(msg)
 
     resp = MessagingResponse()
     resp.message(answer)

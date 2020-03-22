@@ -3,7 +3,7 @@ import wikipedia
 
 def GetInfo(message):
     try:
-        answer = wikipedia.summary(message, chars=655360, auto_suggest=True)
+        answer = wikipedia.summary(message, chars=6553600, auto_suggest=True)
 
         print(answer)
     except:

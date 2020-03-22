@@ -22,4 +22,6 @@ def WhatsappBot(request):
 def DeliveryStatus(request):
     print(request.data)
 
+    return HttpResponse(status=200)
+
 

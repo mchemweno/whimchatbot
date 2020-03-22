@@ -9,5 +9,3 @@ def GetInfo(message):
         answer = "please rephrase your question well"
 
     return answer
-
-GetInfo("types of os")

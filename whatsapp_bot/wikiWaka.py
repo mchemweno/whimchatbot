@@ -1,12 +1,12 @@
+from bs4 import BeautifulSoup
 import wikipedia
 
 def getInfo(message):
     try:
         answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=True)
-        print(answer.content)
+        soup = BeautifulSoup(answer.content, 'html.parser')
+        text = soup.get_text()
     except:
         return "please rephrase your question well"
 
-    return answer.content
-
-
+    return text

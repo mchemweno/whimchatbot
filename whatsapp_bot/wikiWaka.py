@@ -9,5 +9,6 @@ def GetInfo(message):
     except:
         answer = "please rephrase your question well"
 
-    return str(answer)
+    return answer
 
+GetInfo("types of computers")

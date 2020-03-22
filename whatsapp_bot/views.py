@@ -17,4 +17,4 @@ def WhatsappBot(request):
     resp.message(answer)
 
     print(resp)
-    return HttpResponse(str(resp))
+    return HttpResponse(resp)

@@ -24,7 +24,7 @@ SECRET_KEY = 'y0@ici*k#^)r7-=1l%vuo_g-*u15^f2apz2u84-mi3yv^h9x7j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['282c1390.ngrok.io']
+ALLOWED_HOSTS = ['whimchatbot.herokuapp.com']
 
 # Application definition
 

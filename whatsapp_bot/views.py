@@ -48,7 +48,9 @@ def WhatsappBot(request):
             start += 1600
             stop += 1600
             reference += 1600
-            time.sleep(1)
+
+        if step == 11000 or step == 22000 or step == 33000 or step == 44000:
+            time.sleep(2)
 
         if difference < 1600:
             print(answer[:stop:])

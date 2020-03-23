@@ -50,7 +50,7 @@ def WhatsappBot(request):
             print(answer[:stop:])
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
-                body=answer[0:1600:],
+                body=answer[:stop:],
                 to=request.data['From']
             )
             break

@@ -23,6 +23,7 @@ def WhatsappBot(request):
     stop = 1600
     step = 0
     reference = 1600
+
     for x in range(0, len(answer)):
         step += 1
 
@@ -36,8 +37,17 @@ def WhatsappBot(request):
             stop += 1600
             reference += 1600
 
-    # resp = MessagingResponse()
-    # resp.message(answer)
+        difference = (len(answer) - stop)
+        if (difference < 1600):
+            message = client.messages.create(
+                from_='whatsapp:+14155238886',
+                body=answer[stop:],
+                to=request.data['From']
+            )
+            break
+
+        # resp = MessagingResponse()
+        # resp.message(answer)
 
     return HttpResponse(status=200)
 

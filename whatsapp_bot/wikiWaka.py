@@ -13,4 +13,3 @@ def getInfo(message):
     return answerString
 
 
-

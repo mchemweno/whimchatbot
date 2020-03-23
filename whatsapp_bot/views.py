@@ -27,6 +27,7 @@ def WhatsappBot(request):
     for x in range(0, len(answer)):
         step = step + 1
         if len(answer) < 1600:
+            print(answer)
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
                 body=answer,
@@ -34,6 +35,7 @@ def WhatsappBot(request):
             )
             break
         if step == reference:
+            print(answer[start:stop:])
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
                 body=answer[start:stop:],
@@ -45,9 +47,10 @@ def WhatsappBot(request):
 
         difference = (len(answer) - stop)
         if difference < 1600:
+            print(answer[:stop:])
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
-                body=answer[stop:],
+                body=answer[:stop:],
                 to=request.data['From']
             )
             break

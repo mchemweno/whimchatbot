@@ -35,7 +35,7 @@ def WhatsappBot(request):
             )
             break
 
-        if (step == reference or step == reference):
+        if step == reference:
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
                 body=answer[start:stop:],

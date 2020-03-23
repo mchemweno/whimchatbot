@@ -6,9 +6,12 @@ from twilio.rest import Client
 def getInfo(message):
     try:
         answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=True)
-        answerString = answer.content[:1600:]
+        answerString = answer.content
         print(answerString)
     except:
         return "please rephrase your question well"
 
     return answerString
+
+
+

@@ -19,11 +19,21 @@ def WhatsappBot(request):
     auth_token = 'b93c5358a6f88ce95bd35ab4e8648f81'
     client = Client(account_sid, auth_token)
 
-    message = client.messages.create(
-        from_='whatsapp:+14155238886',
-        body=answer,
-        to=request.data['From']
-    )
+    start = -1600
+    stop = 0
+    step = 0
+    for x in range(0, len(answer)):
+        start += 1600
+        stop += 1600
+        step += 1600
+
+        if x == step:
+            message = client.messages.create(
+                from_='whatsapp:+14155238886',
+                body=answer[start:stop:],
+                to=request.data['From']
+            )
+
     # resp = MessagingResponse()
     # resp.message(answer)
 

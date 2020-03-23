@@ -21,7 +21,7 @@ def WhatsappBot(request):
 
     message = client.messages.create(
         from_='whatsapp:+14155238886',
-        body='Hello! This is an editable text message. You are free to change it and write whatever you like.',
+        body=answer,
         to=request.data['From']
     )
     # resp = MessagingResponse()

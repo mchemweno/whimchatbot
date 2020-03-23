@@ -38,6 +38,7 @@ def WhatsappBot(request):
         difference = (len(answer) - stop)
         if difference < 1600:
             print(answer[stop:])
+            break
 
         # if (difference < 1600):
         #     message = client.messages.create(

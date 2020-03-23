@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import wikipedia
+from twilio.rest import Client
 
 
 def getInfo(message):
@@ -11,5 +12,3 @@ def getInfo(message):
         return "please rephrase your question well"
 
     return answerString
-
-

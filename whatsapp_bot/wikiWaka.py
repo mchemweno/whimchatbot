@@ -7,7 +7,6 @@ def getInfo(message):
     try:
         answer = wikipedia.page(title=message, auto_suggest=True, redirect=True, preload=True)
         answerString = answer.content
-        print(answerString)
     except:
         return "please rephrase your question well"
 

@@ -42,7 +42,7 @@ def WhatsappBot(request):
             if (difference < 1600):
                 message = client.messages.create(
                     from_='whatsapp:+14155238886',
-                    body=answer[stop:],
+                    body=answer[:stop:],
                     to=request.data['From']
                 )
                 break

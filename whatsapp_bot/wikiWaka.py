@@ -16,7 +16,7 @@ def getInfo(message):
 def getSummary(message):
     pass
 
-
+#
 # mystring = getInfo('History')
 #
 # start = 0

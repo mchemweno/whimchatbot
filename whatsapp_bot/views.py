@@ -60,10 +60,10 @@ def WhatsappBot(request):
             )
             break
 
-    resp = MessagingResponse()
-    resp.message("Thank you for using Whim")
+    # resp = MessagingResponse()
+    # resp.message("Thank you for using Whim")
 
-    return HttpResponse(resp)
+    return HttpResponse(status=200)
 
 
 @api_view(['POST'])

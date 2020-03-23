@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from twilio.rest import Client
-
+import time
 from . import wikiWaka
 
 # Create your views here.
@@ -48,6 +48,7 @@ def WhatsappBot(request):
             start += 1600
             stop += 1600
             reference += 1600
+            time.sleep(0.300)
 
         if difference < 1600:
             print(answer[:stop:])

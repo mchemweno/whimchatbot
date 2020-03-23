@@ -50,15 +50,15 @@ def WhatsappBot(request):
             print(answer[:stop:])
             message = client.messages.create(
                 from_='whatsapp:+14155238886',
-                body=answer[:stop:],
+                body=answer,
                 to=request.data['From']
             )
             break
 
-    # resp = MessagingResponse()
-    # resp.message(answer)
+    resp = MessagingResponse()
+    resp.message("Thank you for using Whim")
 
-    return HttpResponse(status=200)
+    return HttpResponse(resp)
 
 
 @api_view(['POST'])

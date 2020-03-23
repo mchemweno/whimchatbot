@@ -26,6 +26,9 @@ def getSummary(message):
 #
 # for x in range(0, len(mystring)):
 #     step = step + 1
+#     if len(mystring) < 1600:
+#         print(mystring)
+#         break
 #     if step == reference:
 #         print(mystring[start:stop:])
 #         start += 1600

@@ -17,21 +17,21 @@ def getSummary(message):
     pass
 
 
-mystring = getInfo('History')
-
-start = 0
-stop = 1600
-step = 0
-reference = 1600
-
-for x in range(0, len(mystring)):
-    step = step + 1
-    if step == reference:
-        print(mystring[start:stop:])
-        start += 1600
-        stop+= 1600
-        reference += 1600
-
-    difference = (len(mystring)-stop)
-    if difference < 1600:
-        print(mystring[:stop:])
+# mystring = getInfo('History')
+#
+# start = 0
+# stop = 1600
+# step = 0
+# reference = 1600
+#
+# for x in range(0, len(mystring)):
+#     step = step + 1
+#     if step == reference:
+#         print(mystring[start:stop:])
+#         start += 1600
+#         stop+= 1600
+#         reference += 1600
+#
+#     difference = (len(mystring)-stop)
+#     if difference < 1600:
+#         print(mystring[stop:])

@@ -50,6 +50,7 @@ def WhatsappBot(request):
 
         if difference < 1600:
             print(answer[:stop:])
+            print(f'lenght is {len(answer)}')
             print(f'Stop is {stop}')
             message = client.messages.create(
                 from_='whatsapp:+14155238886',

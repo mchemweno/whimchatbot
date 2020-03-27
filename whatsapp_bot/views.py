@@ -33,7 +33,7 @@ def WhatsappBot(request):
             media_url=image,
             to=request.data['From']
         )
-        time.sleep(3)
+        time.sleep(1)
 
     for x in range(0, stringLength):
         step = step + 1

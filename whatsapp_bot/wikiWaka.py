@@ -11,8 +11,8 @@ def getInfo(message):
         return "please rephrase your question well"
 
     myImage = ''
-    if answer.images[0]:
-        myImage= answer.images[0]
+    if answer.images[1]:
+        myImage= answer.images[1]
 
     return {'myImage': myImage, 'answer': answerString}
 

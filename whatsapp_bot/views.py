@@ -13,7 +13,8 @@ def WhatsappBot(request):
     print(request.data)
     msg = request.data['Body']
 
-    answer = wikiWaka.getInfo(msg)
+    answer = wikiWaka.getInfo(msg)['answer']
+    image = wikiWaka.getInfo(msg)['myImage']
 
     account_sid = 'ACdc287d5d268548c5fb806a6d9b64f1c3'
     auth_token = 'b93c5358a6f88ce95bd35ab4e8648f81'
@@ -24,6 +25,14 @@ def WhatsappBot(request):
     step = 0
     reference = 1600
     stringLength = len(answer)
+
+    if image != '':
+        message = client.messages.create(
+            from_='whatsapp:+14155238886',
+            body='Image',
+            media_url=image,
+            to=request.data['From']
+        )
 
     for x in range(0, stringLength):
         step = step + 1

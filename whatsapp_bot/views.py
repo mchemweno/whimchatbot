@@ -17,7 +17,7 @@ def WhatsappBot(request):
     image = wikiWaka.getInfo(msg)['myImage']
 
     account_sid = 'ACdc287d5d268548c5fb806a6d9b64f1c3'
-    auth_token = 'b93c5358a6f88ce95bd35ab4e8648f81'
+    auth_token = '7d43fcc41d295df4575df73223ed3678'
     client = Client(account_sid, auth_token)
 
     start = 0
